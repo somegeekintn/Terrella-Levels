@@ -83,5 +83,20 @@ The following describes the properties allowed for each object type based on the
 
 
 * `fc` (number): *Must be 0 to indicate an orb*
-* `c` (point): *Required. Defaults to 0.0, 0.0.*
-  * Defines an object's center.
+* `c` (point): *Required. Defaults to (0.0, 0.0).*
+  * Center of orb.
+* `e` (number, enum): *Required*
+  * Energy, aka color. Valid values are:
+    * `1`: Red
+    * `2`: Green
+    * `3`: Blue
+    * `4`: Orange
+* `fx` (bool): *Optional. Defaults to true.*
+  * Indicates orb is fixed if true.
+* `br` (number): *Optional. Defaults to 0.0.*
+  * Birthrate, or how often a clone of this orb is created. Expressed in seconds.
+* `rs` (number): *Optional. Defaults to 6.0.*
+  * Respawn interval, or how long after this orb is destroyed should it respawn. Set to 0.0 to never respawn. Expressed in seconds.
+* `v` (point): *Optional. Defaults to (0.0, 0.0)*
+  * Initial velocity of orb in m/s.
+
