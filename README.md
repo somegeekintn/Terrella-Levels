@@ -35,13 +35,13 @@ Keep in mind that there is limited error checking for fwd files at the moment, a
 
 ---
 
-An objects properties are dependent on the value of the `fc` propery which is an enumeration indicating the type of in-game object. Valid `fc` values are:
+An object's properties are dependent on the value of the `fc` propery which is an enumeration indicating the type of in-game object. Valid `fc` values are:
 
 * `0`: *Orb*
 * `1`: *Gate*
 * `2`: *Goal*
 * `3`: *Black Hole*
-* `4`: *Player*
+* `4`: *Terrella*
 * `5`: *Round Wall*
 * `6`: *Switch*
 * `7`: *Wall*
@@ -53,7 +53,7 @@ Dimensions are in "meters" which span 20 points on screen at the normal zoom lev
 * Terrella's radius: 0.25 meters (or 10 points across at normal zoom)
 * Typical goal radius: 1.6 meters
 
-There is no expected origin or boundary for a level. The game will determine the bounding box for each level and transform all coordinates as needed.
+There is no expected origin or boundary for a level. The game will determine the bounding box for each level and transform all coordinates as needed. It's also helpful to know that the gravity of an orb is limited to a maximum distance of 24 meters unlike real gravity.
 
 Every object must also contain a point `c` which defines the object's center. Points, energy, and somtimes sizes are encountered frequently so let me define those before moving on to the specific types of game objects. 
 
@@ -145,7 +145,7 @@ The following section describes the properties allowed for each object type base
 * `r` (number): *Optional. Defaults to 0.8*
   * Radius of black hole.
  
-##### Player
+##### Terrella (player)
 
 ---
 
@@ -186,6 +186,7 @@ The following section describes the properties allowed for each object type base
 ##### Wall
 
 ---
+Although walls appear pill shaped on screen, the physics engine models them as rectangles.
 
 * `fc` (number): *Must be 7 to indicate a wall*
 * `c` (point): *Required.*
