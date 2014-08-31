@@ -4,7 +4,9 @@
 
 This document explains the how to create and use world description files for Terrella. Terrella is a game created for iOS. Additional details can be found on [the Terrella web site](http://www.quietspark.com/terrella/). Some knowledge of gameplay is assumed.
 
-Terrella world description files are simply JSON files with a "fwd" file extension and so referred to as "fwd" files. The root object is a dictionary that must contain a "levels" element. "levels" is an array of level ojects which are documented below. 
+Terrella world description files are simply JSON files with a "fwd" file extension and so referred to as "fwd" files. Terrella also recognized "fwdz" files, which are simply compressed "fwd" files. Attempting to open plain "fwd" files in Safari just shows the contents of the file rather than giving us an opportunity to open the file in Terrella.
+
+The root object in a "fwd" file is a dictionary that must contain a "levels" element. "levels" is an array of level ojects which are documented below. The "examples" directory in this repo includes many levels that are present in the game or freebies that have been made available elsewhere.
 
 Keep in mind that there is limited error checking for fwd files at the moment, and setting ridiculous values is likely to have ridiculous side effects.
 
